@@ -1,77 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>Livraria</title>
+    <script src="js/script.js"></script>
+    <title>Kit Cozinha Completa</title>
+
+    <script>
+
+
+        function mais(id) {
+            var input = document.getElementById(id);
+            var valorAtual = parseInt(input.value);
+            valorAtual++;
+            input.value = valorAtual;
+            multiplicar(id)
+        }
+
+        function menos(id) {
+            var input = document.getElementById(id);
+            var valorAtual = parseInt(input.value);
+            valorAtual--;
+            valorAtual = Math.max(valorAtual, 0);
+            input.value = valorAtual;
+            multiplicar(id)
+        }
+
+        function verificarCompra(id) {
+            var input = document.getElementById(id);
+            var valorAtual = parseInt(input.value);
+
+            if (valorAtual === 0) {
+                alert('você precia selecionar pelo menos 1 item para comprar.')
+                event.preventDefault();
+            } else {
+                alert("Complete o formulário para concluir a compra!")
+            }
+        }
+
+        function multiplicar(id) {
+            var input = document.getElementById(id);
+            var valorInput = parseInt(input.value);
+            var preço = document.getElementById("preço_" + id).innerHTML
+            var peço_float = paiserFloat(preço)
+            var h1 = document.getElementById('val_' + id)
+            h1.innerHTML = 'R$' + (valorInput * preço_float)
+        }
+
+
+
+
+
+
+
+
+
+    </script>
 </head>
+
 <body>
     <header>
-        <h1>Livraria Kristina Ohlsson</h1>
+        <h1>Kit Cozinha Completa</h1>
         <nav>
             <ul>
                 <li><a href="#">Início</a></li>
-                <li><a href="#">Livros</a></li>
-                <li><a href="#">Autores</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#">Preços</a></li>
+                <li><a href="#">Compra</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
         </nav>
     </header>
-    
 
     <main>
         <section class="cards">
-            <div class="card">
-                <img src="img/indesejadas.jpg" alt="Livro 1">
-                <h2>Indesejadas</h2>
-                <p>Autora: Kristina Ohlsson</p>
-                <button>Comprar</button>
-            </div>
+
+
+
+
 
             <div class="card">
-                <img src="img/silenciadas.jpg" alt="Livro 2">
-                <h2>Silenciadas</h2>
-                <p>Autora: Kristina Ohlsson</p>
-                <button>Comprar</button>
-            </div>
+                <img src="img/bb].jpg" alt="batedeira">
+                <h2>Batedeira</h2>
 
-            <div class="card">
-                <img src="img/desaparecidas.jpg" alt="Livro 3">
-                <h2>Desaparecidas</h2>
-                <p>Autora: Kristina Ohlsson</p>
-                <button>Comprar</button>
+                <button onclick="mais(inp)">+</button> 
+                <input id="inp" type="number" id="numero" value="0" min="0" readonly> 
+                <button onclick="menos(inp)">-</button>
+                <p>Preço: <span id="preço_inp">300,00</span></p>
+                <p id="val_inp">R$0</p>
+                <button><a href="cadastro.html" onclick="verificarCompra()">Comprar</a></button>
             </div>
         </section>
-    </main>
-    <main>
-        <section class="cards">
-            <div class="card">
-                <img src="img/blu.jfif" alt="Livro 2">
-                <h2>Blutsfreunde</h2>
-                <p>Autora: Kristina Ohlsson</p>
-                <button>Comprar</button>
-            </div>
 
-            <div class="card">
-                <img src="img/bruderluge.jpg" alt="Livro 1">
-                <h2>Bruderlüge</h2>
-                <p>AutoraDesaparecidas: Kristina Ohlsson</p>
-                <button>Comprar</button>
-            </div>
 
-            <div class="card">
-                <img src="img/shauiajsgd.jpg" alt="Livro 3">
-                <h2>Schwesterherz</h2>
-                <p>Autora: Kristina Ohlsson</p>
-                <button>Comprar</button>
-            </div>
+
+
+        <div class="card" style="grid-template-columns: auto auto auto; gap: 10px;">
+            <img height="250px" width="270px" style="margin-top: 40px;" src="img/ll.webp" alt="batedeira">
+            <h2 style="margin-top: 30px; color: aliceblue;"> Liquidificador R$400,00</h2>
+
+            <p style="margin-top: 7px; margin-bottom: 12px; color:  rgb(5, 5, 5);">Preço:</p>
+            <p style="color: aliceblue;" id="val1">R$0</p>
+            <button><a href="cadastro.html" onclick="verificarCompra()">Comprar</a></button>
+
+            <input id="inpt" type="number" id="numero" value="0" min="0" readonly>
+
+            <button onclick="mais(intp)">+</button>
+            <button onclick="menos(inpt)">-</button>
+        </div>
         </section>
+
+
+
+
+
+        <div class="card" style="grid-template-columns: auto auto auto; gap: 10px;">
+            <img height="250px" width="270px" style="margin-top: 40px;" src="img/ss.webp" alt="batedeira">
+            <h2 style="margin-top: 30px; color: aliceblue;"> Sanduicheira R$100,00</h2>
+
+            <p style="margin-top: 7px; margin-bottom: 12px; color:  rgb(5, 5, 5);">Preço:</p>
+            <p style="color: aliceblue;" id="val1">R$0</p>
+            <button><a href="cadastro.html" onclick="verificarCompra()">Comprar</a></button>
+
+            <input id="inpti" type="number" id="numero" value="0" min="0" readonly>
+
+            <button onclick="mais(inpti)">+</button>
+            <button onclick="menos(inpti)">-</button>
+        </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
 
     <footer>
-        <p>&copy; 2023 Livraria Kristina Ohlsso | Criado por Carine Falchetti</p>
+        <p>&copy; 2023 Kit Cozinha Completa (Loja de Cosméticos Elétricos) | Criado por Brenda e Ana Clara</p>
     </footer>
+
+
+    </div>
 </body>
+
 </html>

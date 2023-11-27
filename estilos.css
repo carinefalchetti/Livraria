@@ -42,7 +42,7 @@ main {
     width: calc(33.33% - 20px); /* 33.33% - 40px */
     margin: 10px; /* Define um espaçamento externo */
     padding: 20px; /* Define um espaçamento interno */
-    background-color: #ffffff; /* Define a cor de fundo */
+    background-color:rgb(236, 203, 235))3), 143, 26); /* Define a cor de fundo */
     box-shadow: 0 2px 4px rgba(5, 2, 173, 0.24); /* Adiciona uma sombra */
     text-align: center; /* Centraliza o texto */
     float: left; /* Faz com que os elementos fiquem na mesma linha */
@@ -54,8 +54,8 @@ main {
 }
 
 .card button {
-    background-color: #0004d4;
-    color: #fff;
+    background-color: #3678f1;
+    color: #f0eaea;
     border: none;
     padding: 7px 14px;
     margin-top: 8px;
@@ -64,12 +64,12 @@ main {
 }
 
 .card button:hover {
-    background-color: #03055f; /* Muda a cor de fundo ao passar o mouse */
+    background-color: #ebecfa; /* Muda a cor de fundo ao passar o mouse */
 }
 
 footer {
     background-color: #03055f;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     padding: 1rem;
 }
@@ -167,7 +167,7 @@ input[type="number"] {
   }
 
   button {
-    background-color: #007bff;
+    background-color: #92b7df;
     color: white;
     border: none;
     border-radius: 4px;
@@ -182,6 +182,6 @@ input[type="number"] {
   
   /* Botão de Enviar */
   button:hover {
-    background-color: #0056b3;
+    background-color: #7ab4ee;
   }
 
