@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/tt.jpg">
+    <title>Kit  Cozinha Completa</title>
     <link rel="stylesheet" href="estilos.css">
-    <script src="js/script.js"></script>
-    <title>Kit Cozinha Completa</title>
 
     <script>
-
-
         function mais(id) {
             var input = document.getElementById(id);
             var valorAtual = parseInt(input.value);
@@ -18,7 +16,6 @@
             input.value = valorAtual;
             multiplicar(id)
         }
-
         function menos(id) {
             var input = document.getElementById(id);
             var valorAtual = parseInt(input.value);
@@ -28,6 +25,7 @@
             multiplicar(id)
         }
 
+   
         function verificarCompra(id) {
             var input = document.getElementById(id);
             var valorAtual = parseInt(input.value);
@@ -36,106 +34,93 @@
                 alert('você precia selecionar pelo menos 1 item para comprar.')
                 event.preventDefault();
             } else {
-                alert("Complete o formulário para concluir a compra!")
+                alert("Complete o cadastro para concluir a compra!")
             }
         }
-
         function multiplicar(id) {
-            var input = document.getElementById(id);
+            var input = document.getElementById(id)
             var valorInput = parseInt(input.value);
             var preço = document.getElementById("preço_" + id).innerHTML
-            var peço_float = paiserFloat(preço)
+            var preço_float = parseFloat(preço)
             var h1 = document.getElementById('val_' + id)
-            h1.innerHTML = 'R$' + (valorInput * preço_float)
+            h1.innerHTML = 'R$ ' + (valorInput *preço_float)
+
         }
 
-
-
-
-
-
-
-
-
-    </script>
+      
+        </script>
 </head>
+<body >
 
-<body>
-    <header>
+
+
+
+
+               
+
+
+
+
+
+
+    <header style="position: fixed ; width: 100%; ">
+        
+      
         <h1>Kit Cozinha Completa</h1>
         <nav>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Preços</a></li>
-                <li><a href="#">Compra</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html">Compras</a></li>
+                <li><a href="index.html">Preços</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
+   
+        
+  
+    <main style=" margin-bottom: 50px; " >
+        <main style=" margin-top: 20px;"></main>
+        <br>
+        <br>
         <section class="cards">
-
-
-
-
+            <div class="card">
+                <img src="img/bb].jpg" alt="Batedeira">
+                <h2>Batedeira</h2>
+                
+                <button onclick="mais('inp')">+</button>
+                <input id="inp" type="number" id="numero" value="0" min="0" readonly>
+                <button onclick="menos('inp')">-</button>
+                <p>Preço: <span id="preço_inp">200,00</span></p>
+                <p id="val_inp">R$0</p>
+                <button><a href="cadastro.html" onclick="verificarCompra('inp')">Comprar</a></button>
+            </div>
 
             <div class="card">
-                <img src="img/bb].jpg" alt="batedeira">
-                <h2>Batedeira</h2>
+                <img src="img/ll.webp" alt="Liquidificador">
+                <h2>Liquidificador</h2>
+                
+                
+                <button onclick="mais('ins')">+</button>
+                <input id="ins" type="number" id="numero" value="0" min="0" readonly>
+                <button onclick="menos('ins')">-</button>
+                <p>Preço: <span id="preço_ins">400,00</span></p>
+                <p id="val_ins">R$0</p>
+                <button><a href="cadastro.html" onclick="verificarCompra('ins')">Comprar</a></button>
+            </div>
 
-                <button onclick="mais(inp)">+</button> 
-                <input id="inp" type="number" id="numero" value="0" min="0" readonly> 
-                <button onclick="menos(inp)">-</button>
-                <p>Preço: <span id="preço_inp">300,00</span></p>
-                <p id="val_inp">R$0</p>
-                <button><a href="cadastro.html" onclick="verificarCompra()">Comprar</a></button>
+            <div class="card">
+                <img src="img/ss.webp" alt="Sanduicheira">
+                <h2>Sanduicheira</h2>
+                
+                <button onclick="mais('inj')">+</button>
+                <input id="inj" type="number" id="numero" value="0" min="0" readonly>
+                <button onclick="menos('inj')">-</button>
+                <p>Preço: <span id="preço_inj">100,00</span></p>
+                <p id="val_inj">R$0</p>
+                <button><a href="cadastro.html" onclick="verificarCompra('inj')">Comprar</a></button>
             </div>
         </section>
-
-
-
-
-        <div class="card" style="grid-template-columns: auto auto auto; gap: 10px;">
-            <img height="250px" width="270px" style="margin-top: 40px;" src="img/ll.webp" alt="batedeira">
-            <h2 style="margin-top: 30px; color: aliceblue;"> Liquidificador R$400,00</h2>
-
-            <p style="margin-top: 7px; margin-bottom: 12px; color:  rgb(5, 5, 5);">Preço:</p>
-            <p style="color: aliceblue;" id="val1">R$0</p>
-            <button><a href="cadastro.html" onclick="verificarCompra()">Comprar</a></button>
-
-            <input id="inpt" type="number" id="numero" value="0" min="0" readonly>
-
-            <button onclick="mais(intp)">+</button>
-            <button onclick="menos(inpt)">-</button>
-        </div>
-        </section>
-
-
-
-
-
-        <div class="card" style="grid-template-columns: auto auto auto; gap: 10px;">
-            <img height="250px" width="270px" style="margin-top: 40px;" src="img/ss.webp" alt="batedeira">
-            <h2 style="margin-top: 30px; color: aliceblue;"> Sanduicheira R$100,00</h2>
-
-            <p style="margin-top: 7px; margin-bottom: 12px; color:  rgb(5, 5, 5);">Preço:</p>
-            <p style="color: aliceblue;" id="val1">R$0</p>
-            <button><a href="cadastro.html" onclick="verificarCompra()">Comprar</a></button>
-
-            <input id="inpti" type="number" id="numero" value="0" min="0" readonly>
-
-            <button onclick="mais(inpti)">+</button>
-            <button onclick="menos(inpti)">-</button>
-        </div>
-        </section>
-
-
-
-
-
-
-
 
 
 
@@ -143,12 +128,22 @@
 
     </main>
 
-    <footer>
-        <p>&copy; 2023 Kit Cozinha Completa (Loja de Cosméticos Elétricos) | Criado por Brenda e Ana Clara</p>
-    </footer>
 
 
-    </div>
+  
+
+            
+        
+           
+        </div>
+        <br>
+     
+        <br>
+        <footer>
+            <p>&copy; 2023 Kit Cozinha Completa (Loja de Cosméticos Elétricos) | Criado por Brenda e Ana Clara</p>
+        </footer>
+    </section>
+</div>
 </body>
 
 </html>

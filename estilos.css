@@ -74,6 +74,7 @@ footer {
     padding: 1rem;
 }
 
+
 nav ul li {
     padding: 6px 12px;
     transition: all 1s ease;
@@ -167,7 +168,7 @@ input[type="number"] {
   }
 
   button {
-    background-color: #92b7df;
+    background-color: #175ba3;
     color: white;
     border: none;
     border-radius: 4px;
@@ -177,11 +178,14 @@ input[type="number"] {
   
   /* Botão de Limpar */
   button[type="reset"] {
-    background-color: #6c757d;
+    background-color: rgb(24, 125, 214);
   }
   
   /* Botão de Enviar */
   button:hover {
     background-color: #7ab4ee;
   }
+
+
+
 

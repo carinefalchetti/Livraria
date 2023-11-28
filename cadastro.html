@@ -6,9 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="estilos.css">
-</head>
+
+</head>     
+    <script>
+        function validarFormulario(id) {                
+            event.preventDefault();
+            var nome = document.getElementById('nome').value
+            var cpf = document.getElementById('cpf').value
+            var email = document.getElementById('email').value
+            var contato = document.getElementById('contato').value
+            var cep = document.getElementById('cep').value
+            var cpfRegex = /^\d{3}\.?\d{3}\.?\d{3}-?\d{2};
+            var emailRegex = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/
+
+        } 
+
+    </script>
+
 
 <body>
+
+    
+
     <header>
         <h1>Cadastro para sua Compra</h1>
         <nav>
@@ -23,7 +42,7 @@
 
     <main>
         <section class="container">
-            <form>
+            <form id="idForm" action="http://jkorpela.fi/cgi-bin/echo.cgi" method="POST"> <br> <br>
                 <fieldset>
                     <legend>Kit Cozinha Completa</legend>
 
@@ -34,7 +53,7 @@
                     
                     <br>CPF:<br>
                     <input type="text" required maxlength="15" pattern="^\d{3}\.?\d{3}\.?\d{3}-?\d{2}" id="idCPF"
-                        placeholder="000.000.000-00" title="Digite o cpf corretamente" /><br>
+                        placeholder="000.000.000-00" name="cpf" title="Digite o cpf corretamente" /><br>
 
 
                         <br>Email: <br>
@@ -43,15 +62,15 @@
         
                     <br>Número de telefone<br>
                     <input type="text" required maxlength="14" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-?([0-9]{4})"
-                        id="idTELEFONE" placeholder="(00) 0000-0000" title="Digite o número de telefone corretamente" /><br>   
+                        id="idTELEFONE" placeholder="(00) 0000-0000" name="telefone" title="Digite o número de telefone corretamente" /><br>   
                         
                         <br>CEP:<br>
-                        <input type="text" required maxlength="9" pattern="\d{5}-?\d{3}" id="idCEP" placeholder="00000-000"
+                        <input type="text" required maxlength="9" pattern="\d{5}-?\d{3}" name="cep" id="idCEP" placeholder="00000-000"
                             title="Digite o CEP corretamente" /><br>
             <br>    
 
                     <div class="actions">
-                        <button type="submit">Cadastrar</button>
+                        <button type="submit">Cadastrar</button>    0000000000000000
                         <button type="reset">Limpar</button>
                     </div>
 
